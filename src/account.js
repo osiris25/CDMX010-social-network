@@ -35,4 +35,4 @@ export const account = `
         <br>
     </div>
 </div>
-</section>`
+</section>`;
