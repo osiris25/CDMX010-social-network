@@ -695,4 +695,10 @@ nav ul li a{
         margin: 8%;  
     }
 }
-
+/*TEXTAREA*/
+textarea{
+   width: 90%;
+   height:100%;
+   resize: none;
+   border: none;
+}

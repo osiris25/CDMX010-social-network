@@ -45,7 +45,7 @@ export const onNavigate = (pathname) => {
         reloadPost();
         
     }else if(pathname=='/perfil') {
-        console.log('Perfil');
+        console.log('Perfil');        
         navLinkVisibilityLogin();
         createPost();
         reloadPost();
