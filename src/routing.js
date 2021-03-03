@@ -15,12 +15,12 @@ export const routes = {
 };
 
 // AQUI INDICAMOS QUE EN EL DIV DEL HTML, SE VAN A RENDARIZAN TODAS LAS SECCIONES
-const rootDiv = document.getElementById('root');
+// const rootDiv = document.getElementById('root');
 
 // FUNCIÓN QUE RENDERIZA EL PATHNAME INDICADO
 // El pathname nos muestra la "route" en la que nos encontramos actualmente
-export const renderRoutes= (pathname) => {
-  rootDiv.innerHTML = routes[pathname];
+export const renderRoutes = (pathname) => {
+  document.getElementById('root').innerHTML = routes[pathname];
 }
 
 export const onNavigate = (pathname) => {
