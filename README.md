@@ -16,6 +16,7 @@ Dentro de la plataforma, cada miembro podrá realizar sus propias publicacones t
 **Herramientas:** HTML, CSS, Javascript, Firebase, Figma y Jest.
 
 ## Contexto
+GirlTechSOS es una plataforma Web-movil (responsive) pensada para la comunidad de desarrolladoras de Laboratoria como un espacio donde puedan compartir dudas técnicas, consejos, recomendaciones o recursos relacionados al mundo tech. Su objetivo principal es convertirse en una herramienta de apoyo para las futuras desarrolladoras Web durante su formación.                  
 
 ## Proceso
 
