@@ -41,6 +41,7 @@ body{
 	Width:300px;
 	Height:30px;
 	border-radius: .10px;
+	text-align: center;
 }
 .check-login{
 	margin-top: 6px;
@@ -161,7 +162,7 @@ body{
 	color: black;
 	font-size: 16px;
 	padding: 10px 0px 10px 10px;
-	font-weight: bold;		
+	font-weight: bold;
 	width: 100%;
 	margin: 0%;
 }
@@ -170,7 +171,7 @@ body{
 font-size: 14px;
 }
 
-.flex-perfil{		
+.flex-perfil{
 	margin-right: 4%;
 	margin-top: 3%;
 	display: flex;
@@ -193,7 +194,7 @@ font-size: 14px;
 	font-size: 18px;
 }
 .notice{
-	width: 90%;    
+	width: 90%;
 }
 
 .container{
@@ -239,7 +240,7 @@ margin-top: 10px;
 	box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
 	border:1px #C3BEBE solid;
 	outline: none;
-	font-size: 15px;
+	font-size: unset;
 	padding-left: 13px;
 	width: 90%;
 	align-self: center;
@@ -301,8 +302,10 @@ margin-top: 10px;
 	box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
 	border:1px #C3BEBE solid;
 	outline: none;
-	font-size: 15px;
-	width: 100%;
+	font-size: unset;
+	width: 95%;
+	padding-left: 4%;
+
 }
 
 .enter{
@@ -312,8 +315,8 @@ margin-top: 10px;
 	outline: none;
 	border-radius: 4px;
 	box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
-	font-size: 12px;
-	width: 25%;
+	font-size: 15px;
+	width: 35%;
 	height: 30px;
 	align-self: flex-end;
 	margin: 3%;
@@ -326,8 +329,8 @@ background-color: #F3A623;
 	outline: none;
 	border-radius: 4px;
 	box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
-	font-size: 12px;
-	width: 20%;
+	font-size: 15px;
+	width: 35%;
 	height: 30px;
 	margin: 3%;
 }
@@ -362,6 +365,7 @@ text-align: center;
 	display: flex;
 	font-weight: bold;
 	margin-left: 15px;
+
 }
 
 .publication{
@@ -426,24 +430,24 @@ text-align: center;
 }
 
 .nextPost{
-	width: 97%;
+	width: 95%;
 	background-color:white;
   border-radius: 4px;
   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
   align-self: center;
-  text-align: center;
+	padding-left: 4%;
 	margin-top: 9px;
 	height: 40px;
 	border:1px #C3BEBE solid;
 	outline: none;
-	font-size: 12px;
+	font-size: unset;
 }
 
 #my-file{
 	display: none;
 }
 .postIcon{
-	width: 10%;
+	width: 12%;
 	height: auto;
 }
 
@@ -466,6 +470,7 @@ text-align: center;
 
 .modal{
 	margin-top: 25px;
+	padding: 3%;
 	width: 45%;
 	height: 50%;
 	background: white;
@@ -638,9 +643,8 @@ nav ul{
 }
 
 nav ul li{
-	display: inline;
-	margin-left: 5%;
-	margin-right: 5%;
+	display: inline;	
+	margin-right: 4%;
 }
 .LiNavbarLink{
 	display: none;
@@ -658,7 +662,11 @@ nav ul li{
 
 textarea{
 	border: none;
-	width: 95%;
+	width: 90%;
+	font-family: 'Roboto';
+	padding-left: 4%;
+	padding-right: 4%;
+	font-size: unset;
 }
 
 .toogle-btn{
@@ -688,8 +696,8 @@ textarea{
 	height: 30%;
 	}
 	#A-logo-container{
-		margin-bottom: 10%; 
-		margin-top: 10%;   
+		margin-bottom: 10%;
+		margin-top: 10%;
 }
 	.info-home{
 		font-size: x-small;
@@ -708,7 +716,7 @@ textarea{
 			display: block;
 			width: 100%;
 			padding: 20px;
-			margin-top: 10%;
+			margin-top: 4%;
 			margin-right: 15%;
 			margin-bottom: 80%;
 	}
@@ -740,6 +748,10 @@ textarea{
 	header{
 		padding: 2%;
 	}
+	.postIcon {
+    width: 17%;
+    height: auto;
+	}
 
 	.flex-menu{
 			display: none;
@@ -752,8 +764,8 @@ textarea{
 			margin: 8%;
 	}
 	.modal{
-	width: 90%;
+	width: 80%;
 	height: 45%;
-
+	padding: 5%;
 	}
 }
