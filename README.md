@@ -2,7 +2,7 @@
 Red social de apoyo técnico para estudiantes de Laboratoria.
 (Link de Github pages)
 
-![](/src/imagenes/girltechsos.jpg)
+![](/src/images/girltechsos.jpg)
 
 <br>
 
@@ -22,7 +22,7 @@ GirlTechSOS es una plataforma Web-movil (responsive) pensada para la comunidad d
 
 ## Proceso
 
-![](/src/imagenes/proceso.jpg)
+![](/src/images/proceso.jpg)
 (Liga zeplin)
 
 ## Usabilidad
