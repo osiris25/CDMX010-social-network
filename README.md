@@ -24,6 +24,6 @@ Dentro de la plataforma, cada miembro podrá realizar sus propias publicacones t
 
 ## Usabilidad
 
-(Gif)
+![Fijo de la webApp GirlTechSOS](https://github.com/osiris25/CDMX010-social-network/blob/master/src/images/presentacion%20de%20la%20pagina.gif)
 
 ## Retrospectiva
