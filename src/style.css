@@ -663,7 +663,7 @@ nav ul li{
 textarea{
 	border: none;
 	width: 90%;
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	padding-left: 4%;
 	padding-right: 4%;
 	font-size: unset;
