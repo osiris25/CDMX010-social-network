@@ -19,6 +19,6 @@ import { login } from '../src/login.js';
 describe('login', () => {
   it('debería ser una función', () => {
     expect(typeof login).toBe('function');
+
   });
 });
-
