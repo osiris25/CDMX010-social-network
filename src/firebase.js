@@ -17,3 +17,6 @@ export const auth = firebase.auth();
 export const storage = firebase.storage();
 export const firestore = firebase.firestore();
 
+console.log(auth)
+console.log(auth.signInWithEmailAndPassword)
+

@@ -19,6 +19,19 @@ import { login } from '../src/login.js';
 describe('login', () => {
   it('debería ser una función', () => {
     expect(typeof login).toBe('function');
-
   });
 });
+
+const mockFirebase = {
+	auth:{
+		currentUser:{
+			usermail: "laura@password.com",
+			password: "contraseña",
+		},
+		signInWithEmailAndPassword: function r() {
+			var t = Array.prototype.slice.call(arguments)
+
+		}
+	} 
+	// firestore
+}

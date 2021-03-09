@@ -20,7 +20,7 @@ export const onNavigate = (pathname) => {
   );
 
   const builder = routes[pathname];
-	console.log(builder);
+	// console.log(builder);
 	builder(firebase);
 };
 

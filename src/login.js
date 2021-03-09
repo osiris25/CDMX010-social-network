@@ -68,7 +68,7 @@ export const loginWithMail = (auth) => {
     const loginMail = document.getElementById('login-mail-input').value;
     const loginPassword = document.getElementById('login-password-input').value;
     
-    auth
+    auth		
       .signInWithEmailAndPassword(loginMail, loginPassword)
       // En el parametro del .then definimos el "userCredential"
       .then(() => {
