@@ -17,21 +17,13 @@
 import { login } from '../src/login.js';
 
 describe('login', () => {
+	const mockFirebase = {
+		auth: jest.fn() 
+	};
+
   it('debería ser una función', () => {
-    expect(typeof login).toBe('function');
+    expect(typeof login(mockFirebase)).toBe('function');
   });
 });
 
-const mockFirebase = {
-	auth:{
-		currentUser:{
-			usermail: "laura@password.com",
-			password: "contraseña",
-		},
-		signInWithEmailAndPassword: function r() {
-			var t = Array.prototype.slice.call(arguments)
 
-		}
-	} 
-	// firestore
-}
