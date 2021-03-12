@@ -3,7 +3,6 @@
 // import { login } from '../src/login.js'
 
 
-
 // describe('navegacion', () => {
 // 	// const navegacion = renderRoutes('/');
 // 	const loginPage = login;
@@ -14,16 +13,30 @@
 //   });
 // });
 
-import { login } from '../src/login.js';
+import { templateLogin } from '../src/login.js';
 
-describe('login', () => {
-	const mockFirebase = {
-		auth: jest.fn() 
-	};
-
-  it('debería ser una función', () => {
-    expect(typeof login(mockFirebase)).toBe('function');
+describe('templateLogin', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '<div id="root"></div>';
   });
-});
+
+	test('renderiza templateLogin', () => {
+		const div = document.getElementById('root');
+		// const mockFirebase = {
+		// 	auth: jest.fn() 
+		// };
+		templateLogin();		
+		expect(div.innerHTML).toMatchSnapshot();
+	})
+})
 
 
+// describe('login', () => {
+// 	const mockFirebase = {
+// 		auth: jest.fn() 
+// 	};
+
+//   it('debería ser una función', () => {
+//     expect(typeof login(mockFirebase)).toBe('function');
+//   });
+// })
