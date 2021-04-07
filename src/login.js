@@ -3,7 +3,7 @@ import { loginGoogle } from './loginGoogle.js';
 import { loginVisibility } from './loginVisibility.js';
 import { openModal } from './modal.js';
 import { loginGithub } from './loginGithub.js';
-import { ErrorLoginMail } from './modalError.js';
+import { ErrorLoginMail, emailVerificationText } from './modalError.js';
 import { navLinkVisibilityWithoutLogin } from './NavdisplayVisibilityFunctions.js';
 
 export const templateLogin = () =>{
@@ -75,9 +75,14 @@ export const loginWithMail = (auth) => {
     auth		
       .signInWithEmailAndPassword(loginMail, loginPassword)
       // En el parametro del .then definimos el "userCredential"
-      .then(() => {
-        const homelink = document.getElementById('hom');
-        homelink.click();
+      .then((userCredential) => {
+				const emailVerified = userCredential.user.emailVerified;
+				if (emailVerified === true) {
+					const homelink = document.getElementById('hom');
+          homelink.click();
+				} else {
+					openModal(emailVerificationText);
+				}
       })   
       .catch(() => {
         openModal(ErrorLoginMail);
