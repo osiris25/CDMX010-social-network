@@ -181,13 +181,18 @@ export const reloadPost = (auth, firestore) => {
       } else {
         srcLike = './images/likeAzul.png';
       }
-      postContainer.innerHTML += templatePost(postsData, idPost, likesCounter, srcLike);
-      const postOwner = postsData.usermail;
-      if (postOwner !== mailUser) {
-        document.getElementById(`btn-delete-${idPost}`).style.display = 'none';
-        document.getElementById(`btn-edit-${idPost}`).style.display = 'none';
-        document.getElementById(`namePostOwner-container-${idPost}`).style.paddingTop = '5%';
-      }
+			const currentPathname = window.location.pathname;
+			const postOwner = postsData.usermail;
+			if (currentPathname === '/perfil'){
+				postOwner === mailUser ? postContainer.innerHTML += templatePost(postsData, idPost, likesCounter, srcLike): '';
+			} else {
+        postContainer.innerHTML += templatePost(postsData, idPost, likesCounter, srcLike);
+        if (postOwner !== mailUser) {
+          document.getElementById(`btn-delete-${idPost}`).style.display = 'none';
+          document.getElementById(`btn-edit-${idPost}`).style.display = 'none';
+          document.getElementById(`namePostOwner-container-${idPost}`).style.paddingTop = '5%';
+        }
+			}
     });
     EliminarPost(firestore);
     EditPosts(firestore);
