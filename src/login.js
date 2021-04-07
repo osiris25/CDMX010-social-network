@@ -66,7 +66,7 @@ export const loginWithMail = (auth) => {
     const accountLink = document.getElementById('acc');  
     accountLink.click();
   });
- 
+
   const submitAccountButton = document.getElementById('login-mail-button');
   submitAccountButton.addEventListener('click', () => {  
     const loginMail = document.getElementById('login-mail-input').value;
