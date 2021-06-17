@@ -28,7 +28,9 @@ Prototipo: https://scene.zeplin.io/project/601c4ce54163f97a0d5103ba
 
 ## Usabilidad
 
-![usabilidad](/src/images/presentacionGirlTech.gif)
+
+![Fijo de la webApp GirlTechSOS](https://github.com/osiris25/CDMX010-social-network/blob/master/src/images/presentacion%20de%20la%20pagina.gif)
+
 
 ## Retrospectiva
 
