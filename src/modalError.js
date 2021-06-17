@@ -45,3 +45,10 @@ export const confirmDelete = `<p class="close" id="close">X</p>
       <h2>¿Deseas eliminar la publicación?</h2>
       <button id="btnAcept" class="btnAcept">Aceptar</button>               
 </div>`;
+
+export const emailVerificationText = `<p class="close" id="close">X</p>
+      <img src="./images/emailVerification.jpg" alt="">
+      <div class="modal-textos" >
+            <h2>Verifica tu email para poder ingresar</h2>
+            <p>Busca el correo de verificación en tu correo electrónico</p>                
+      </div>`;

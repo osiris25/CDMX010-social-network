@@ -76,10 +76,11 @@ export const createAccount = (auth, firestore) => {
             loginlink.click();
             const uidUser = userCredential.user.uid;
             saveInfoUser(newMail, uidUser, createPassword, nameUser, aboutUser, 'urlImg', firestore);
+						emailVerification(auth)
           })
           .catch(() => {
             openModal(ErrorAccount);
-          });
+          })
       } else {        
         document.getElementById('A-error-confirmPassworrd').style.display = 'block';
       }
@@ -96,3 +97,12 @@ export const createAccount = (auth, firestore) => {
   loginVisibility(showAccountPassword, accountPasswordInput);
   loginVisibility(showConfirmPassword, confirmPasswordInput);
 };
+
+const  emailVerification = (auth) => {
+	let user = auth.currentUser;
+	user.sendEmailVerification().then(function() {
+  // Email sent.
+	}).catch(function(error) {
+  // An error happened.
+	});
+}

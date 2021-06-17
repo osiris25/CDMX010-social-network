@@ -3,11 +3,10 @@ import { loginGoogle } from './loginGoogle.js';
 import { loginVisibility } from './loginVisibility.js';
 import { openModal } from './modal.js';
 import { loginGithub } from './loginGithub.js';
-import { ErrorLoginMail } from './modalError.js';
+import { ErrorLoginMail, emailVerificationText } from './modalError.js';
 import { navLinkVisibilityWithoutLogin } from './NavdisplayVisibilityFunctions.js';
 
-export const login =  (firebase) => {
-	const auth = firebase.auth();
+export const templateLogin = () =>{
 	const template = `<div class="container-login">
     <div id="A-logo-container">
         <img id="A-logo" src="./images/logoGris.png" alt="Logo"> 
@@ -45,7 +44,12 @@ export const login =  (firebase) => {
 
   const rootDiv = document.getElementById('root');
   rootDiv.innerHTML = template;
+}
 
+//Funcionalidad del templateLogin
+export const login =  (firebase) => {
+	const auth = firebase.auth();	
+	templateLogin();
   loginWithMail(auth);
   navLinkVisibilityWithoutLogin();
 }
@@ -62,18 +66,23 @@ export const loginWithMail = (auth) => {
     const accountLink = document.getElementById('acc');  
     accountLink.click();
   });
- 
+
   const submitAccountButton = document.getElementById('login-mail-button');
   submitAccountButton.addEventListener('click', () => {  
     const loginMail = document.getElementById('login-mail-input').value;
     const loginPassword = document.getElementById('login-password-input').value;
     
-    auth
+    auth		
       .signInWithEmailAndPassword(loginMail, loginPassword)
       // En el parametro del .then definimos el "userCredential"
-      .then(() => {
-        const homelink = document.getElementById('hom');
-        homelink.click();
+      .then((userCredential) => {
+				const emailVerified = userCredential.user.emailVerified;
+				if (emailVerified === true) {
+					const homelink = document.getElementById('hom');
+          homelink.click();
+				} else {
+					openModal(emailVerificationText);
+				}
       })   
       .catch(() => {
         openModal(ErrorLoginMail);
